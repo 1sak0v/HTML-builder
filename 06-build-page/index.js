@@ -28,7 +28,7 @@ const buildPage = async () => {
 
     const mergeStyles = async () => {
         try {
-            const writableStream = fs.createWriteStream(path.resolve(__dirname, 'project-dist', 'bundle.css'));
+            const writableStream = fs.createWriteStream(path.resolve(__dirname, 'project-dist', 'style.css'));
             const files = await fs.promises.readdir(path.resolve(__dirname, 'styles'), {withFileTypes: true});
         
             for(const file of files) {
